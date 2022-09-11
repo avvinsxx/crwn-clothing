@@ -10,20 +10,20 @@ const StripeCheckoutButton = ({ price }) => {
         alert('Payment successful');
     }
 
-    return (
-        <StripeCheckout
-            label='Pay Now'
-            name='CRWN Clothing Ltd.'
-            billingAddress
-            shippingAddress
-            iamge='https://svgshare.com/i/CUz.svg'
-            description={`Your total is $${price}`}
-            amount={priceForStripe}
-            panelLabel="Pay Now"
-            token={onToken}
-            stripeKey={publishableKey}
-        />
-    )
+  return (
+    <StripeCheckout
+      label='Pay Now'
+      name='CRWN Clothing Ltd.'
+      billingAddress
+      shippingAddress
+      image='https://svgshare.com/i/CUz.svg'
+      description={`Your total is $${price}`}
+      amount={priceForStripe}
+      panelLabel='Pay Now'
+      token={onToken}
+      stripeKey={publishableKey}
+    />
+  );
 };
 
 export default StripeCheckoutButton;
